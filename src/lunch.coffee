@@ -25,7 +25,7 @@ getLunch = (msg) ->
   url = "https://zerocater.com/api/v3/companies/#{process.env.ZEROCATER_TAG}/meals"
   msg.http(url).get() (err, res, body) ->
     meals = JSON.parse(body)
-    meal_id = (m.id for m in meals when m.time > now - 7200)[0]
+    meal_id = (m.id for m in meals when m.time > now - 14400)[0]
     msg.http("#{url}/#{meal_id}").get() (err, res, meal) ->
       m = JSON.parse(meal)
       choices = (item.name for item in m.items).join(', ')
