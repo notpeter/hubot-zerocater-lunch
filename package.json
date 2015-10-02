@@ -1,0 +1,21 @@
+{
+  "name": "hubot-zerocater-lunch",
+  "description": "A Hubot script to find out what's for lunch",
+  "version": "1.0.0",
+  "main": "./src/lunch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notpeter/hubot-zerocater-lunch.git"
+  },
+  "keywords": [
+    "hubot",
+    "lunch",
+    "zerocater"
+  ],
+  "author": "Peter Tripp (https://github.com/notpeter)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/notpeter/hubot-zerocater-lunch/issues"
+  },
+  "homepage": "https://github.com/notpeter/hubot-zerocater-lunch"
+}
