@@ -29,4 +29,5 @@ getLunch = (msg) ->
     msg.http("#{url}/#{meal_id}").get() (err, res, meal) ->
       m = JSON.parse(meal)
       choices = (item.name for item in m.items).join(', ')
-      msg.send "Lunch #{day}: #{m.name} (from #{m.vendor_name})\n#{choices}\n#{m.vendor_image_url}"
+      img = m.vendor_image_url.replace /upload/, "upload/c_fill,h_250,w_400"
+      msg.send "Lunch #{day}: #{m.name} (from #{m.vendor_name})\n#{choices}\n#{img}"
