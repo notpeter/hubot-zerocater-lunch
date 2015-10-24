@@ -12,7 +12,7 @@ in a channel where your Hubot is listening.
     hubot what's for lunch tomorrow?
 
 ### Screenshot (textual irc)
-![image](https://cloud.githubusercontent.com/assets/145113/10708989/fdd405aa-79d1-11e5-9b47-970d22428358.png)
+![image](https://cloud.githubusercontent.com/assets/145113/10709293/d5db8082-79db-11e5-89c8-5487b7599c5f.png)
 
 ### Configuration
 
