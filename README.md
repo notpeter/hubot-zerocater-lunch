@@ -11,6 +11,9 @@ in a channel where your Hubot is listening.
     hubot what's for lunch
     hubot what's for lunch tomorrow?
 
+### Screenshot (textual irc)
+![image](https://cloud.githubusercontent.com/assets/145113/10708989/fdd405aa-79d1-11e5-9b47-970d22428358.png)
+
 ### Configuration
 
 You'll need your four character ZeroCater tag.  Visit your ZeroCater menu and it'll
