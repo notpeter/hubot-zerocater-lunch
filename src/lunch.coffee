@@ -1,11 +1,13 @@
 # Description:
 #   Zerocater lunch
 #
-# Configuration (environment variable):
+# Configuration:
 #   ZEROCATER_TAG='XZ89'
+#   Environement variable with your zerocater tag
 #
 # Commands:
-#   hubot lunch [today|tomorrow]
+#   lunch is here
+#   hubot what's for lunch [today|tomorrow]
 #
 # Author
 #   notpeter
