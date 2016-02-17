@@ -24,7 +24,7 @@ getLunch = (msg) ->
   day = if !msg.match[1] then 'today' else msg.match[1].trim().toLowerCase()
   now =  Math.floor(new Date().getTime() / 1000)
   now = now + 43200 if day == 'tomorrow'
-  url = "https://zerocater.com/api/v3/companies/#{process.env.ZEROCATER_TAG}/meals"
+  url = "https://api.zerocater.com/v3/companies/#{process.env.ZEROCATER_TAG}/meals"
   msg.http(url).get() (err, res, body) ->
     meals = JSON.parse(body)
     meal_id = (m.id for m in meals when m.time > now - 14400)[0]
