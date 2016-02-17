@@ -1,7 +1,7 @@
 {
   "name": "hubot-zerocater-lunch",
   "description": "A Hubot script to find out what's for lunch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./src/lunch",
   "repository": {
     "type": "git",
