@@ -1,13 +1,11 @@
 # Description:
 #   Zerocater lunch
 #
-# Configuration:
+# Configuration (environment variable):
 #   ZEROCATER_TAG='XZ89'
-#   Environement variable with your zerocater tag
 #
 # Commands:
-#   lunch is here
-#   hubot what's for lunch [today|tomorrow]
+#   hubot lunch [today|tomorrow]
 #
 # Author
 #   notpeter
@@ -27,9 +25,10 @@ getLunch = (msg) ->
   url = "https://api.zerocater.com/v3/companies/#{process.env.ZEROCATER_TAG}/meals"
   msg.http(url).get() (err, res, body) ->
     meals = JSON.parse(body)
-    meal_id = (m.id for m in meals when m.time > now - 14400)[0]
-    msg.http("#{url}/#{meal_id}").get() (err, res, meal) ->
+    themeal = (m for m in meals when m.time > now - 14400)[0]
+    details = "https://zerocater.com/m/#{process.env.ZEROCATER_TAG}/#{themeal.id}"
+    msg.http("#{themeal.url}").get() (err, res, meal) ->
       m = JSON.parse(meal)
       choices = (item.name for item in m.items).join(', ')
       img = m.vendor_image_url.replace /upload/, "upload/c_fill,h_250,w_400"
-      msg.send "Lunch #{day}: #{m.name} (from #{m.vendor_name})\n#{choices}\n#{img}"
+      msg.send "Lunch #{day}: #{m.name} (from #{m.vendor_name})\n#{choices}\nDetails: #{details}\n#{img}"
